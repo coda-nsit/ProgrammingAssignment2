@@ -40,7 +40,7 @@ makeCacheMatrix <- function(x = matrix()) {
 ## it first sets the value of inv, if the inv is null that is, the inv hasn't been calculated
 ## it calculates the inverse (inv <- solve(mat, ...)) and then returns the inverse 
 ## if the inv is not null that is, it has already been calculated it returns the cached value
-## thus avoiding the recalculation
+## thus avoiding the recalculation if the original matrix has not changed
 
 cacheSolve <- function(x, ...) {
   inv <- x$getInv()
